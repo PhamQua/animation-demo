@@ -10,7 +10,7 @@ export class AnimationDirective {
   ) { }
   @HostListener('window:scroll', ['$event']) onEnter(e) {
     const componentPosition = this.el.nativeElement.offsetTop
-    const scrollPosition = window.pageYOffset
+    const scrollPosition = window.pageYOffset;
     if (scrollPosition + this.el.nativeElement.offsetHeight >= componentPosition - this.el.nativeElement.offsetHeight) {
       this.onChange.emit('show')
     } else {

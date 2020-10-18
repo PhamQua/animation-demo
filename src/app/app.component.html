@@ -3,7 +3,7 @@
   <div class="mb-4">
     <img src="../assets/banner-1.jpg" style="max-width: 100%">
   </div>
-  <div class="row mb-4">
+  <div class="row mb-4" (onChange)="onChangeOpacity($event)" animationView [@opacityAnimation]="stateOpacity">
     <div class="col-4">
       <img src="../assets/blog-one.png">
       <p>Designed using the latest edge technologies for maximum performances and compatibility.</p>
@@ -18,7 +18,7 @@
     </div>
   </div>
  <div >
-  <div class="row mb-4" (onChange)="onChange($event)" animationView [@listAnimation]="state">
+  <div class="row mb-4" (onChange)="onChange($event)" animationView [@listAnimation]="stateList">
     <div class="col-4 item-test" >
       <img src="../assets/blog-one.png">
       <p>Designed using the latest edge technologies for maximum performances and compatibility.</p>

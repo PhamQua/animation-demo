@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
-import { OPACITY_CONTAIN } from './shared/animations/opacity';
+import { OPACITY_ANIMATION } from './shared/animations/opacity';
 import { LIST_ANIMATION } from './shared/animations/animation'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [LIST_ANIMATION]
+  animations: [LIST_ANIMATION, OPACITY_ANIMATION]
 })
 export class AppComponent {
-  state = 'hide';
+  stateList = 'hide';
+  stateOpacity = 'hide';
   title = 'animation-demo';
   onChange(value) {
-    console.log(value);
-    this.state = value;
+    this.stateList = value;
+  }
+  onChangeOpacity(value) {
+    this.stateOpacity = value;
   }
 }
